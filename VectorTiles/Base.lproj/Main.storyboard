@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,53 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VectorTiles" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="100" translatesAutoresizingMaskIntoConstraints="NO" id="8Ib-dc-02g">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cu2-uj-Z4x" customClass="TiledView" customModule="VectorTiles" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="2000" height="2000"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2000" id="nRp-gi-oov"/>
+                                            <constraint firstAttribute="width" constant="2000" id="xwb-i7-pCd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Cu2-uj-Z4x" firstAttribute="height" secondItem="Sbz-hQ-UMa" secondAttribute="height" id="4wR-Ql-bcj"/>
+                                    <constraint firstItem="Cu2-uj-Z4x" firstAttribute="width" secondItem="Sbz-hQ-UMa" secondAttribute="width" id="Fqm-Uv-oKQ"/>
+                                    <constraint firstItem="Cu2-uj-Z4x" firstAttribute="centerY" secondItem="Sbz-hQ-UMa" secondAttribute="centerY" id="Ml4-sg-ZFJ"/>
+                                    <constraint firstItem="Cu2-uj-Z4x" firstAttribute="centerX" secondItem="Sbz-hQ-UMa" secondAttribute="centerX" id="bHE-v1-EHO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Sbz-hQ-UMa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="TTi-eH-SMo"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="KUJ-xl-xrh"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8Ib-dc-02g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d4o-E4-yH0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Ib-dc-02g" secondAttribute="trailing" id="jLW-HZ-S12"/>
+                            <constraint firstItem="8Ib-dc-02g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="waG-hC-bg1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Ib-dc-02g" secondAttribute="bottom" id="wmW-A4-30B"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="8Ib-dc-02g" id="ftg-Uh-VpH"/>
+                        <outlet property="tiledView" destination="Cu2-uj-Z4x" id="acu-ua-8BM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="110"/>
         </scene>
     </scenes>
 </document>

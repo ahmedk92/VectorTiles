@@ -13,6 +13,8 @@
 		2831D17B241BFD7300B81039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2831D179241BFD7300B81039 /* Main.storyboard */; };
 		2831D17D241BFD7500B81039 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2831D17C241BFD7500B81039 /* Assets.xcassets */; };
 		2831D180241BFD7500B81039 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2831D17E241BFD7500B81039 /* LaunchScreen.storyboard */; };
+		2831D188241BFD8B00B81039 /* TiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831D187241BFD8B00B81039 /* TiledView.swift */; };
+		2831D18A241BFDF100B81039 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831D189241BFDF100B81039 /* Drawable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2831D17C241BFD7500B81039 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2831D17F241BFD7500B81039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2831D181241BFD7500B81039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2831D187241BFD8B00B81039 /* TiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledView.swift; sourceTree = "<group>"; };
+		2831D189241BFDF100B81039 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,15 @@
 		2831D172241BFD7300B81039 /* VectorTiles */ = {
 			isa = PBXGroup;
 			children = (
+				2831D181241BFD7500B81039 /* Info.plist */,
 				2831D173241BFD7300B81039 /* AppDelegate.swift */,
+				2831D189241BFDF100B81039 /* Drawable.swift */,
 				2831D175241BFD7300B81039 /* SceneDelegate.swift */,
+				2831D187241BFD8B00B81039 /* TiledView.swift */,
 				2831D177241BFD7300B81039 /* ViewController.swift */,
-				2831D179241BFD7300B81039 /* Main.storyboard */,
 				2831D17C241BFD7500B81039 /* Assets.xcassets */,
 				2831D17E241BFD7500B81039 /* LaunchScreen.storyboard */,
-				2831D181241BFD7500B81039 /* Info.plist */,
+				2831D179241BFD7300B81039 /* Main.storyboard */,
 			);
 			path = VectorTiles;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				2831D178241BFD7300B81039 /* ViewController.swift in Sources */,
 				2831D174241BFD7300B81039 /* AppDelegate.swift in Sources */,
 				2831D176241BFD7300B81039 /* SceneDelegate.swift in Sources */,
+				2831D188241BFD8B00B81039 /* TiledView.swift in Sources */,
+				2831D18A241BFDF100B81039 /* Drawable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
