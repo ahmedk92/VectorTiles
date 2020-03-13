@@ -12,11 +12,11 @@ protocol Drawable {
     var rect: CGRect { get }
 }
 
-struct AnyDrawable: Drawable {
+struct BlockDrawable: Drawable {
     var rect: CGRect
-    var drawing: (CGContext) -> Void
+    var drawingBlock: (CGContext) -> Void
     
     func draw(in context: CGContext) {
-        drawing(context)
+        drawingBlock(context)
     }
 }

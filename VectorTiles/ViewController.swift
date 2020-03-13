@@ -42,11 +42,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 height: size.height
             )
                         
-            self.tiledView.add(drawable: AnyDrawable(rect: rect, drawing: { _ in
-                
+            self.tiledView.add(drawable: BlockDrawable(rect: rect) { _ in                
                 attributedString.draw(in: rect)
-                
-            }))
+            })
         }
     }
     
